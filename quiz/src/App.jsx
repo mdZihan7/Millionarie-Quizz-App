@@ -1,8 +1,10 @@
 import "./app.css"
+import Quizzz from "./components/Quizzz";
+import React, { useEffect, useState } from "react";
 
 function App() {
 
-  const [questionNumber, setQuestionNumber] = useState(1)
+  const [questionNumber, setQuestionNumber] = useState(5)
   const moneyPyramid = [
     {id:1, amount:"$ 100"},
     {id:2, amount:"$ 200"},
@@ -23,7 +25,14 @@ function App() {
   ].reverse();
   return (
     <div className="app">
-      <div className="main">main</div>
+      <div className="main">
+        <div className="top">
+          <div className="timer">30</div>
+        </div>
+        <div className="bottom">
+          <Quizzz></Quizzz>
+        </div>
+      </div>
       <div className="display">
         <ul className="moneylist">
           {moneyPyramid.map(m=>(
