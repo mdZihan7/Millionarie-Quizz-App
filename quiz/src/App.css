@@ -1,36 +1,60 @@
-.app{
-    height: 100vH;
+.app {
+    height: 100vh;
     display: flex;
-    background-color: brown;
     color: white;
-}
-
-.main{
+    background-color: #020230;
+  }
+  
+  .main {
     width: 75%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), brown),
-     url("./assets/background.jpg") center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+      url("https://i.ytimg.com/vi/yQbJRGs0fy8/maxresdefault.jpg") center;
     display: flex;
     flex-direction: column;
-}
-
-
-.quizzz{
-    height: 100%;
+  }
+  
+  .pyramid {
+    width: 25%;
+    background-color: #020230;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-}
-
-.top{
+    justify-content: center;
+  }
+  
+  .moneyList {
+    padding: 20px;
+    list-style: none;
+    width: 100%;
+  }
+  
+  .moneyListItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .moneyListItem.active {
+    background-color: teal;
+  }
+  
+  .moneyListItemNumber {
+    width: 30%;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+  .moneyListItemAmount {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  .top {
     height: 50%;
     position: relative;
-}
-.bottom{
-    height: 50%;
-}
-
-.timer{
+  }
+  
+  .timer {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -38,124 +62,145 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
-    font-weight: 800;
     position: absolute;
     bottom: 10px;
-    left: 72px;
-}
-
-.question{
+    left: 80px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .bottom {
+    height: 50%;
+  }
+  
+  .trivia {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .question {
     width: 80%;
-    background: linear-gradient(#140007, brown);
-    border: 4px solid white;
+    background: linear-gradient(#100241, black);
     text-align: center;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.answers{
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-size: 20px;
+  }
+  
+  .answers {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.answer{
+  }
+  
+  .answer {
     width: 40%;
     padding: 10px;
-    text-align: center;
-    background: linear-gradient(#140007, rgb(46, 4, 4));
-    border: 1px solid wheat;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 300;
-    cursor: pointer;
     margin: 0 10px 20px 10px;
-}
-
-.answer:hover, 
-.answer.active {
-    background: #800530;
-}
-
-.answer.correct{
-    animation: correct 3s ease forwards;
-}
-
-@keyframes correct{
-    0%, 
-    22%, 
-    42%{
-        background: #800530;
-    }
-    20%, 
-    40%,
-    60%{
-        background: linear-gradient(#140007, rgb(46, 4, 4));
-    }
-    62%,
-    100%{
-        background: green;
-    }
-}
-
-.answer.wrong{
-    animation: wrong 3s ease forwards;
-}
-
-@keyframes wrong{
-    0%, 
-    22%, 
-    42%{
-        background: #800530;
-    }
-    20%, 
-    40%,
-    60%{
-        background: linear-gradient(#140007, rgb(46, 4, 4));
-    }
-    62%,
-    100%{
-        background: red;
-    }
-}
-
-.display{
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.moneylist{
-    list-style: none;
-    width: 100%;
-    padding: 20px;
-}
-
-.moneylistItem{
-
-}
-
-.moneylistItemNumber{
-    font-size: 16px;
-    font-weight: 100;
-    width: 40%;
-}
-
-.moneylistItem{
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.moneylistItemAmount{
-    font-size: 18px;
+    text-align: center;
+    background: linear-gradient(#0e0124, #22074d);
+    border: 1px solid white;
+    border-radius: 15px;
     font-weight: 300;
-}
-
-.moneylistItem.active{
-    background-color: teal;
-}
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .answer:hover,
+  .answer.active {
+    background: mediumblue;
+  }
+  
+  .answer.correct {
+    animation: correct 3s ease forwards;
+  }
+  
+  @keyframes correct {
+    0%,
+    22%,
+    42% {
+      background: mediumblue;
+    }
+    20%,
+    40%,
+    60% {
+      background: linear-gradient(#0e0124, #22074d);
+    }
+    62%,
+    100% {
+      background: green;
+    }
+  }
+  
+  .answer.wrong {
+    animation: wrong 3s ease forwards;
+  }
+  
+  @keyframes wrong {
+    0%,
+    22%,
+    42% {
+      background: mediumblue;
+    }
+    20%,
+    40%,
+    60% {
+      background: linear-gradient(#0e0124, #22074d);
+    }
+    62%,
+    100% {
+      background: crimson;
+    }
+  }
+  
+  .endText {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .start {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .startInput {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .startInput:focus {
+    outline: none;
+  }
+  
+  .startButton {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+  }
